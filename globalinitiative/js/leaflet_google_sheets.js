@@ -5,9 +5,11 @@ var code = "1EXl0ZGn4RMBtim_c4zwA_te3VQgIquVywZlT_XKR0qo"
 
 document.addEventListener('DOMContentLoaded',function(){
   map = L.map('map').setView([22, 11], 4);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-      attribution: '&copy; Global Initiative | Pablo Gallego'
+   L.tileLayer('https://korona.geog.uni-heidelberg.de/tiles/roadsg/x={x}&y={y}&z={z}', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
+  // hydrology overlay layer
   
    var marker1 = {
     radius: 3,
@@ -56,9 +58,9 @@ document.addEventListener('DOMContentLoaded',function(){
 		
 		
 		var myStyle = {
-		 "color": "yellow",
+		 "color": "red",
 		 "dashArray": '',
-		 "weight": 1,
+		 "weight": 0.5,
 		 "opacity": 0.2
 		};
 
